@@ -16,12 +16,19 @@ public class Producto {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long prodcuto_id;
+    @Column(nullable = false)
+    private Long producto_id;
 
     @ManyToOne(fetch =FetchType.LAZY)
-    @JoinColumn(name = "orden_id")
+    @JoinColumn(name = "orden_id", nullable = false)
     private Orden orden;
+
+    @Column(nullable = false)
     private String codigo;
+
+    @Column(nullable = false)
     private String descripcion;
+
+    @Column(nullable = false)
     private double precio;
 }

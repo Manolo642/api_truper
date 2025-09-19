@@ -11,9 +11,8 @@ import java.util.List;
 @Data
 public class OrdenRequestDTO {
 
-    private Sucursal sucursal;
-    private List<Producto> productos;
-    private LocalDate fecha;
-    private double total;
+    private String sucursalName;
+    private List<ProductoDTO> productosDto;
+
 
 }
